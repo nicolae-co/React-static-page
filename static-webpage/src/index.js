@@ -2,18 +2,49 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reactLogo from './reactSvg.svg'
 
-function App() {
+function Header() {
+  return (
+    <header>
+      <nav className='nav'>
+        <img src={reactLogo} alt='react logo' className='nav-logo' />
+        <ul className='nav-items'>
+          <li>Pricing</li>  
+          <li>About</li>  
+          <li>Contact</li>  
+        </ul>
+      </nav>
+      </header>
+  )
+}
+
+function MainContent() {
   return (
     <div>
-      <img src={reactLogo} width='40px' alt='react logo' />
-      <h1>Fun facts about React</h1>
-      <ul>
-        <li>Was first released in 2013</li>
-        <li>Was originally created by Jordan Walke</li>
-        <li>Has well over 100k stars on Github</li>
-        <li>Is maintained by Facebook</li>
-        <li>Powers thousands of enterprise apps, including mobile apps</li>
-      </ul>
+      <h1 className='content-title'>Reasons I'm excited to learn React</h1>
+      <ol className='content-list'>
+        <li>It's a popular library, so I'll be 
+            able to fit in with the cool kids!</li>
+        <li>I'm more likely to get a job as a developer
+            if I know React</li>
+      </ol>
+    </div>
+  )
+}
+
+function Footer() {
+  return (
+    <footer className='footer'>
+      <small>@ 2023 Nicolae development. All rights reserved.</small>
+    </footer>
+  )
+}
+
+function App() {
+  return (
+    <div className='app'>
+      <Header />
+      <MainContent />
+      <Footer />
     </div>
   );
 }
